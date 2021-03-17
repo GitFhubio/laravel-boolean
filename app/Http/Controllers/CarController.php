@@ -13,8 +13,10 @@ class CarController extends Controller
       return view('home',['cars'=>$cars]);
   }
   else{
-    $car = collect($cars)->where('id', $id);
-    return view('product',['car'=>$car]);}
+    $car = Car::find($id);
+    return view('product',['car'=>$car]);
+};
+
    // $car=array_filter($cars, function($item) {
    //  return $item->id == $id ;});
    //  dd($car);

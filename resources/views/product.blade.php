@@ -11,10 +11,10 @@
 
 <body>
 <ul>
-  <li>{{ $car[0]->id }}</li>
-  <li>{{ $car[0]->brand }}</li>
-  <li>{{ $car[0]->modello }}</li>
-  <li>{{ $car[0]->colore }}</li>
+  <li>{{ $car->id }}</li>
+  <li>{{ $car->brand }}</li>
+  <li>{{ $car->modello }}</li>
+  <li>{{ $car->colore }}</li>
 </ul>
 
     </body>
