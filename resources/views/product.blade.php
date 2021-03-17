@@ -11,16 +11,11 @@
 
 <body>
   {{-- qui ho array di oggetti --}}
-  <div style="display:flex;flex-direction:column;" class="container">
+{{ $car[0]->brand }}
+{{ $car[0]->modello }}
+{{ $car[0]->colore }}
+@php
 
-  @foreach ($cars as $car)
-    <div style="display:flex;" class="item">
-    {{$car->brand }}
-    {{ $car->modello}}
-    {{$car->id}}
-  </div>
-  @endforeach
-
-</div>
+@endphp
     </body>
 </html>

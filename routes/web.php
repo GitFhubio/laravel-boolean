@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/','CarController@index');
+Route::get('/{id}','CarController@index');
