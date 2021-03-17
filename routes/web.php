@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','CarController@index');
 Route::get('/{id}','CarController@index');
+Route::get('/test/{id}','CarController@index2');
+// Route::get('/tost/{id}','CarController@index3');

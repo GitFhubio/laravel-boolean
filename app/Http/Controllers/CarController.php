@@ -15,12 +15,36 @@ class CarController extends Controller
   else{
     $car = Car::find($id);
     return view('product',['car'=>$car]);
+
+
 };
 
-   // $car=array_filter($cars, function($item) {
-   //  return $item->id == $id ;});
-   //  dd($car);
-   //   var_dump($car);
-   //  return view('product',['car'=>$car]);
-  }
+ }
+
+ public function index2($id = null)
+ {$cars = Car::all();
+     // return view('home', compact('cars'));
+     if($id==null){
+     return view('home',['cars'=>$cars]);
+ }
+ else{
+   $car = collect($cars)->where('id', $id)->first();
+       return view('product',['car'=>$car]);
+};
+ }
+
+//  public function index3($id = null)
+//  {$cars = Car::all();
+//      // return view('home', compact('cars'));
+//      if($id==null){
+//      return view('home',['cars'=>$cars]);
+//  }
+//  else{
+//    $collection = collect($cars);
+//    $car = $collection->filter(function ($value, $id) {
+//     return collect($value)['id'] == $id;
+// });
+// return view('product',['car'=>$car]);
+// };
+//  }
 }
